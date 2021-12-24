@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".presentation.detail.PokemonDetailFragment">
+
+    <TextView
+        android:id="@+id/tv_detail_pokemon_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/normal_margin"
+        tools:text="Bulbasaur" />
+
+    <ImageView
+        android:id="@+id/iv_pokemon_preview"
+        android:layout_width="@dimen/view_size_128"
+        android:layout_height="@dimen/view_size_128"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/normal_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_pokemon_name"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_detail_pokemon_abilities"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/abilities"
+        android:labelFor="@id/tiet_detail_pokemon_abilities"
+        app:boxStrokeWidth="@dimen/no_size"
+        app:boxStrokeWidthFocused="@dimen/no_size"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pokemon_preview"
+        android:layout_margin="@dimen/normal_margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_detail_pokemon_abilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_detail_pokemon_type"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/type"
+        android:labelFor="@id/tiet_detail_pokemon_type"
+        app:boxStrokeWidth="@dimen/no_size"
+        app:boxStrokeWidthFocused="@dimen/no_size"
+        app:layout_constraintTop_toBottomOf="@id/til_detail_pokemon_abilities"
+        android:layout_margin="@dimen/normal_margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_detail_pokemon_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
